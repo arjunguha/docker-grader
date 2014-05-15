@@ -1,0 +1,6 @@
+{
+  "container": "arjunguha/docker-grader",
+  "account": "unprivileged",
+  "directory": "/unprivileged/gradingspace",
+  "command": "pwd; whoami; ./hack"
+}

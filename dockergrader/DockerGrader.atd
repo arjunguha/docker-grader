@@ -1,0 +1,16 @@
+type gradingFile = {
+  container: string;
+  account : string;
+  ?memory : string option;
+  ?time : string option;
+  directory : string;
+  command : string;
+  ?outputs <json repr="object"> : (string * string) list option;
+  ?stdout : string option;
+  ?stderr : string option;
+  ?errors : string option
+}
+
+type status = [ Graded | GradingError | Ignored ]
+
+type statusFile <json repr="object"> = (string * status) list

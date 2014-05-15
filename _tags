@@ -1,0 +1,29 @@
+# OASIS_START
+# DO NOT EDIT (digest: 37a4fe635c0d277c54393bac0f300b14)
+# Ignore VCS directories, you can use the same kind of rule outside
+# OASIS_START/STOP if you want to exclude directories that contains
+# useless stuff for the build process
+<**/.svn>: -traverse
+<**/.svn>: not_hygienic
+".bzr": -traverse
+".bzr": not_hygienic
+".hg": -traverse
+".hg": not_hygienic
+".git": -traverse
+".git": not_hygienic
+"_darcs": -traverse
+"_darcs": not_hygienic
+# Executable dockergrader
+"dockergrader/DockerGrader.native": package(async)
+"dockergrader/DockerGrader.native": package(atdgen)
+"dockergrader/DockerGrader.native": package(core)
+"dockergrader/DockerGrader.native": package(docker)
+"dockergrader/DockerGrader.native": package(threads)
+"dockergrader/DockerGrader.native": package(yojson)
+<dockergrader/*.ml{,i}>: package(async)
+<dockergrader/*.ml{,i}>: package(atdgen)
+<dockergrader/*.ml{,i}>: package(core)
+<dockergrader/*.ml{,i}>: package(docker)
+<dockergrader/*.ml{,i}>: package(threads)
+<dockergrader/*.ml{,i}>: package(yojson)
+# OASIS_STOP

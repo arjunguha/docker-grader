@@ -1,0 +1,22 @@
+OASISFormat: 0.3
+OCamlVersion: >= 4.01.0
+Name:        dockergrader
+Version:     0.1
+Synopsis:    Docker-based grading script
+Authors:     https://github.com/arjunguha/docker-grader
+License:     BSD-3-clause
+Plugins:     META (0.3)
+BuildTools:
+  ocamlbuild
+
+Executable dockergrader
+  Path: dockergrader
+  MainIs: DockerGrader.ml
+  CompiledObject: native
+  BuildDepends:
+    core,
+    async,
+    threads,
+    yojson,
+    atdgen,
+    docker
